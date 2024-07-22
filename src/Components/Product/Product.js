@@ -1,21 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./Product.css";
 import { addTocart } from "../../Redux/cartSlice";
+import { getProducts } from "../../Redux/productSlice";
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
-
   const dispatch = useDispatch();
+  const { data: products, status } = useSelector((state) => state.product);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((data) => data.json())
-      .then((result) => setProducts(result));
+    dispatch(getProducts());
   }, []);
 
+  if(status === 'Loading'){
+    return <p>Loading...</p>
+  }
+  if(status === 'error'){
+    return <p>Something went wrong!</p>
+  }
+
   const handleAddToCart = (product) => {
-           dispatch(addTocart(product))
+    dispatch(addTocart(product));
   };
 
   return (
@@ -28,8 +33,8 @@ const Product = () => {
             <div className="product-details">
               <h3 className="product-title">{product.title}</h3>
               <p className="product-price">${product.price.toFixed(2)}</p>
-              <button 
-                className="add-to-cart-button" 
+              <button
+                className="add-to-cart-button"
                 onClick={() => handleAddToCart(product)}
               >
                 Add to Cart
