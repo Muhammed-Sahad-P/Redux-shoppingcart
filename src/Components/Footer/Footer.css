@@ -1,0 +1,58 @@
+.footer {
+    background-color: #ffffff;
+    color: #4A4A4A;
+    padding: 1rem 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.125rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-contact {
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-social-icon {
+    font-size: 2rem; 
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social-icon.instagram:hover {
+    color: #E1306C;
+  }
+  
+  .footer-social-icon.facebook:hover {
+    color: #3b5998;
+  }
+  
+  .footer-social-icon.twitter:hover {
+    color: #1DA1F2; 
+  }
+  
+  .footer-copy {
+    color: #6D6D6D;
+    font-family: 'Poppins', sans-serif;
+  }
+  
