@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import "./Product.css";
+import { addTocart } from "../../Redux/cartSlice";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -11,8 +15,7 @@ const Product = () => {
   }, []);
 
   const handleAddToCart = (product) => {
-    console.log("Add to Cart:", product);
-   
+           dispatch(addTocart(product))
   };
 
   return (
