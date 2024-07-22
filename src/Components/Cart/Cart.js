@@ -25,7 +25,7 @@ const Cart = () => {
                 className="add-to-cart-button"
                 onClick={() => handleRemoveCart(product.id)}
               >
-                Remove from cart
+                Remove 
               </button>
             </div>
           </div>
