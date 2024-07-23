@@ -19,12 +19,12 @@
   
   .footer-logo-text {
     font-size: 1.125rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
   }
   
   .footer-contact {
     margin-bottom: 0.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
   }
   
   .footer-social {
@@ -35,7 +35,7 @@
   }
   
   .footer-social-icon {
-    font-size: 2rem; 
+    font-size: 1rem; 
     transition: color 0.3s ease;
   }
   
@@ -53,6 +53,6 @@
   
   .footer-copy {
     color: #6D6D6D;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
   }
   
