@@ -8,9 +8,6 @@ const Footer = () => {
     <>
     <footer className="footer">
     <div className="footer-container">
-      <div className="footer-logo">
-        <p className="footer-logo-text">Shopping Cart</p>
-      </div>
       <p className="footer-contact">xyz,abc | +91 1234567890 | shoppingcart@gmail.com</p>
       <div className="footer-social">
         <FaInstagram className="footer-social-icon instagram" />
